@@ -7,7 +7,7 @@ class Contact:
         self.favorite = favorite
         self.add_information = kwargs
 
-    def __call__(self):
+    def __str__(self):
         if self.favorite is False:
             favorite_ru = 'Нет'
         else:
@@ -19,9 +19,6 @@ class Contact:
             f'В избранных: {favorite_ru}\n'
             f'Дополнительная информация: {self.add_information}'
         )
-
-    def __str__(self):
-        return self.__call__()
 
 
 class PhoneBook:
@@ -81,4 +78,3 @@ if __name__ == '__main__':
     phone_book.add_contact(jhonny)
     phone_book.get_contact('jhon', 'ghjk')
 
-    
